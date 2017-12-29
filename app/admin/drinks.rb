@@ -12,4 +12,6 @@ ActiveAdmin.register Drink do
 #   permitted
 # end
 
+permit_params :title, :description, :steps, :source
+
 end
