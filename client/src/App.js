@@ -61,9 +61,9 @@ class App extends Component {
     return drinks
     ? <Container text>
         <Header as='h2' icon textAlign='center'>
-        <Icon name='gift' circular />
+        <Icon circular>42</Icon>
         <Header.Content>
-          42 Coupons for Courtney
+          Coupons for Courtney
         </Header.Content>
       </Header>
       {drinks &&
@@ -72,8 +72,7 @@ class App extends Component {
           {Object.keys(drinks).map((key) => {
             return (
               <div key={key}>
-                <Accordion.Title active={activeIndex === key} index={key} onClick={this.handleClick}>
-                  <Checkbox checked={drinks[key].complete}/>
+                <Accordion.Title active={activeIndex === key} index={key} onClick={this.handleClick} className={drinks[key].complete ? "strikethrough" : "normal"}>
                   <Icon name='dropdown' />
                   {drinks[key].id}. &nbsp;{drinks[key].title}
                 </Accordion.Title>
@@ -82,7 +81,7 @@ class App extends Component {
                   {drinks[key].source ?
                     (<p><a href={drinks[key].source} target="_blank">More info...</a></p>)
                     :
-                    (<p></p>)
+                    (<p/>)
                   }
                 </Accordion.Content>
               </div>

@@ -3,3 +3,31 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.bottom {
+  background: url(https://images.unsplash.com/photo-1464219222984-216ebffaaf85?auto=format&fit=crop&w=1050&q=80) no-repeat center center fixed!important;
+  -webkit-background-size: cover!important;
+  -moz-background-size: cover!important;
+  -o-background-size: cover!important;
+  background-size: cover!important;
+}
+
+h2 .content {
+  font-size: 2em!important;
+  margin-bottom: 28px!important;
+}
+
+h2 .icon {
+  background: black!important;
+  color: antiquewhite!important;
+}
+
+.strikethrough {
+  background: #dadada;
+  color: #b3b1b1;
+  text-decoration: line-through;
+}
+
+.ui.text.container {
+  max-width: 450px!important;
+}
